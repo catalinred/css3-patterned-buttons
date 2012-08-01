@@ -1,2 +1,4 @@
-css3-patterned-buttons
+CSS3 patterned buttons
 ======================
+
+A new collection of buttons.
