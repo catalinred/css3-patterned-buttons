@@ -125,16 +125,16 @@ body{
   box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
 }
 
-.button[disabled], .button[disabled]:hover, .button[disabled]:active,
 .button[disabled], .button[disabled]:hover, .button[disabled]:active{
   border: 1px solid #eaeaea;
   background: #fafafa;
   cursor: default;
   position: static;
   color: #999;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  /* Usually, !important should be avoided but here it's really needed :) */
+  -moz-box-shadow: none !important; 
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
   text-shadow: none;
 }
 
