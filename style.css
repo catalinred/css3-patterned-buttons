@@ -135,7 +135,7 @@ body{
   -moz-box-shadow: none !important; 
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  text-shadow: none;
+  text-shadow: none !important;
 }
 
 /* Larger buttons styles */
@@ -183,7 +183,6 @@ body{
 
 .button.green:active{
   background: #57a957;
-  border-color: #57a957;
 }
 
 /* */
@@ -199,21 +198,39 @@ body{
 
 .button.red:active{
   background: #c43c35;
-  border-color: #c43c35;
 }
 
 /* */
 
-.green[disabled], .green[disabled]:hover, .green[disabled]:active
-{
+.button.blue{
+  background-color: #269CE9;
+  border-color: #269CE9;
+}
+
+.button.blue:hover{
+  background-color: #70B9E8;
+}
+
+.button.blue:active{
+  background: #269CE9;
+}
+
+/* */
+
+.green[disabled], .green[disabled]:hover, .green[disabled]:active{
   border: 1px solid #57A957;
   background: #57A957;
   color: #D2FFD2;
 }
 
-.red[disabled], .red[disabled]:hover, .red[disabled]:active
-{
+.red[disabled], .red[disabled]:hover, .red[disabled]:active{
   border: 1px solid #C43C35;
   background: #C43C35;
   color: #FFD3D3;
+}
+
+.blue[disabled], .blue[disabled]:hover, .blue[disabled]:active{
+  border: 1px solid #269CE9;
+  background: #269CE9;
+  color: #93D5FF;
 }
