@@ -3,6 +3,7 @@ body{
   text-align: center;
   font-family: 'Lucida sans', Arial, Helvetica;
   color: #444;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpiYGBgEPr//z8DCIMBkAEWYIRywIIAAQYAPcIPFz/ScLMAAAAASUVORK5CYII=);
 }
 
 h1{
@@ -16,6 +17,9 @@ h1{
 /* Buttons styles */
 
 .button{
+  display: inline-block;
+  *display: inline;
+  zoom: 1;  
   padding: 6px 20px;
   margin: 0;
   cursor: pointer;
@@ -24,9 +28,6 @@ h1{
   font: bold 13px arial, helvetica, sans-serif;
   text-decoration: none;
   white-space: nowrap;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
   color: #555;
   background-color: #ddd;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0))),
@@ -53,7 +54,7 @@ h1{
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
-  text-shadow: 0 1px 0 #fff;  
+  text-shadow: 0 1px 0 rgba(255,255,255, .9);  
 }
 
 .button:hover{
@@ -72,7 +73,7 @@ h1{
 }
 
 .button[disabled], .button[disabled]:hover, .button[disabled]:active{
-  border: 1px solid #eaeaea;
+  border-color: #eaeaea;
   background: #fafafa;
   cursor: default;
   position: static;
@@ -99,7 +100,6 @@ h1{
 
 .button.large:active{
   top: 2px;
-  text-transform: uppercase;
 }
 
 /* Colored buttons styles */
@@ -169,19 +169,19 @@ h1{
 /* */
 
 .green[disabled], .green[disabled]:hover, .green[disabled]:active{
-  border: 1px solid #57A957;
+  border-color: #57A957;
   background: #57A957;
   color: #D2FFD2;
 }
 
 .red[disabled], .red[disabled]:hover, .red[disabled]:active{
-  border: 1px solid #C43C35;
+  border-color: #C43C35;
   background: #C43C35;
   color: #FFD3D3;
 }
 
 .blue[disabled], .blue[disabled]:hover, .blue[disabled]:active{
-  border: 1px solid #269CE9;
+  border-color: #269CE9;
   background: #269CE9;
   color: #93D5FF;
 }
@@ -189,8 +189,7 @@ h1{
 /* Group buttons */
 
 .button-group,
-.button-group li,
-.button{
+.button-group li{
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -209,12 +208,11 @@ h1{
 }
 
 .button-group li{
-  margin-right: -1px;
+  margin-right: -1px; /* Overlap each right button border */
 }
 
 .button-group .button{
   font-size: 13px; /* Set the font size, different from inherited 0 */
-  margin: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0; 
