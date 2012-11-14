@@ -21,6 +21,7 @@ h1{
   padding: 0;
 }
 
+a.button,
 .button{
   display: inline-block;
   *display: inline;
