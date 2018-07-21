@@ -1,0 +1,17 @@
+{
+  "name": "css3-patterned-buttons",
+  "version": "1.0.0",
+  "description": "CSS patterned buttons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catalinred/css3-patterned-buttons.git"
+  },
+  "author": "Catalin Rosu",
+  "license": "ISC",
+  "scripts": {
+    "scss": "node-sass -o css style.scss --output-style compressed --watch --source-map-embed false"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
